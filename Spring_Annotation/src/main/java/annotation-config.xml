@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <bean class="com.Spring2.Laptop" id="theLaptop">
+    	<property name="name" value="Ulta-Notebook"></property>
+    	<property name="company" value="Lenovo"></property>
+    	<property name="ram" value="8"></property>
+    </bean>
+    
+     <bean class="com.Spring2.Laptop" id="otherLaptop">
+    	<property name="name" value="T56"></property>
+    	<property name="company" value="Lenovo"></property>
+    	<property name="ram" value="4"></property>
+    </bean>
+    
+    
+    
+    <!-- Required for annotations to work -->
+    <context:annotation-config></context:annotation-config>
+    
+    <!-- Required for @Component to work -->
+    <context:component-scan base-package="com.Spring2"></context:component-scan>
+    
+    </beans>
